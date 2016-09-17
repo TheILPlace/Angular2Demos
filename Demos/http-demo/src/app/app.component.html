@@ -1,0 +1,30 @@
+<label for="firstName">First Name</label>
+<input type="text" id="firstName" #firstName>
+<br>
+
+<label for="lastName">Last Name</label>
+<input type="text" id="lastName" #lastName>
+<br>
+<label for="address">Address</label>
+<input type="text" id="address" #address>
+<br>
+<label for="phone">Phone</label>
+<input type="text" id="phone" #phone>
+<br>
+
+<button (click)="onSubmit(firstName.value, lastName.value, address.value, phone.value)">Submit</button>
+<br>
+Id Created = {{newCustomerID}}
+<hr>
+<button (click)="onGetData()">Get Customers</button>
+<ul>
+  <li *ngFor="let customer of customers">{{customer.lastName}}, {{customer.firstName}}</li>
+</ul>
+<hr>
+
+Get customers Async
+
+<p>{{asyncString | async | json }}</p>
+
+<hr>
+<my-wiki></my-wiki>

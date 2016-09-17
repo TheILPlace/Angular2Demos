@@ -1,0 +1,29 @@
+<div class="pipes">
+  <h1>Pipes</h1>
+  <h2>Built-in Pipes</h2>
+  <p>change: {{myValue}} to uppercase: {{myValue | uppercase}}</p>
+  <p>change: {{myDate}} to MM/dd/yy : {{myDate | date:"MM/dd/yy"}}</p>
+  <p>chain pipes: splice+upper {{myValue}}: {{myValue | slice:3:7 | uppercase}}</p>
+  <hr>
+  <h2>Custom Pipe</h2>
+  <input type="text" #input (keyup)="0">
+  <p>{{input.value | double}}</p>
+  <hr>
+  Value: <input type="text" #newItem>
+
+  <!--Dont forget to import the FormsModule in the app.module.ts
+  in order to use ngModel on the input fields-->
+  Filter: <input type="text" [(ngModel)]="myFilter">
+
+  <button (click)="pushValue(newItem.value)" class="btn btn-primary">Add Item</button>
+  <ul>
+    <li *ngFor="let item of values | filter: myFilter">{{item}}</li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let item of values | filter: myFilter">{{item}}</li>
+  </ul>
+  <hr>
+  <h2>Async Pipe</h2>
+  <p>{{asyncValue | async}}</p>
+</div>

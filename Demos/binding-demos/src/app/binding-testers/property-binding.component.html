@@ -1,0 +1,19 @@
+    <div>
+        
+    Enter Value (string interpolation) <input type="text" value="{{myvalue}}">
+    <br><br>
+    Enter Value (DOM property binding) <input type="text" [value]="myvalue">
+    
+    <br><br>
+    
+    <p [ngClass]="{redBox: true}">Bind to Dom Property- ngClass --  Red box ? </p>
+
+    <br>
+    <p [ngClass]="{redBox: isItTrue()}"> Bind to Dom Property- ngClass - Red box ? </p>
+
+    <p [ngStyle]="{color: 'green'}">Bind to Dom Property- ngClass - Red box green text? </p>
+
+<hr>
+    
+
+    </div>

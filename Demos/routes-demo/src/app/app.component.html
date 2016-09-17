@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10">
+            <h1>Router Demos !</h1>
+            <hr>
+            
+            <!--[routerLInk] is angular property binding. indicated to which route to go to.
+            do not use <a href ....> this will cause the browser to reload-->
+
+            <!--[queryParams] - parameters to pass to the route as query params in the url-->
+
+            <!--routerLinkActive - the name of the css class to apply when this route is active-->
+            
+            <!--[routerLinkActiveOptions]="{exact: true}"  - property binding - to apply
+                the class only in the exact route is matched. in this example our route is ''.
+                without this propery , it will start "red" for all routes
+                same is with child routes. in this sample, "user" will stay red -->
+
+                <!--[routerLink] - more than one segment in the url is allowed
+                e.g.: /user/2/details   etc
+                in this sample: /user/x  where is is a userid in this sample.
+                in this sample we use event binding (input)="0" in order to trigger ng2 change detection
+                so #user_id will re-evaluate
+                (this is because we dont click on any button / event elsewhere)
+                -->
+                
+
+            <a [routerLink]="['']" [queryParams]="{analytics: 500}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a> |
+            <input type="text" #user_id (input)="0">
+            <a [routerLink]="['user', user_id.value]" routerLinkActive="active">User</a>
+            <br>
+            
+            <!--we can se the routerLinkActive on another element too, that wrappes the [routerLink]-->
+            <!--<div routerLinkActive="active">
+                i am also active in User route
+                <a [routerLink]="['user', user_id.value]" routerLinkActive="active">User</a>
+            </div>-->
+            <hr>
+
+                        
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

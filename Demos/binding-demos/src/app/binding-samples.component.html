@@ -1,0 +1,43 @@
+<h2>
+  Angular 2 Binding Demos
+</h2>
+
+
+<h1>
+  Demo 1 - String Interpolation
+</h1>
+
+
+<str-int>
+    <!--<div>This is a content sample</div>-->
+</str-int>
+
+<hr>
+
+<h1>Demo 2 - Property Binding</h1>
+
+<prop-bind></prop-bind>
+
+<h1> Demo 3 - Custom bindings</h1>
+<app-custom-properties [result]="10"></app-custom-properties>
+
+<hr>
+
+<h1> Demo 4 - Event bindings</h1>
+<app-event-binding></app-event-binding>
+
+
+
+<hr>
+
+<h1> Demo 5 - Event bindings</h1>
+<app-custom-event-binding (clickMe)="showAlert($event)"></app-custom-event-binding>
+
+<hr>
+<h1> Demo 6 - Two Way Binding</h1>
+<app-two-way-binding></app-two-way-binding>
+
+
+<hr>
+<h1> Demo 7 - Pass value from parent to child and back</h1>
+<app-pass-data-parent></app-pass-data-parent>

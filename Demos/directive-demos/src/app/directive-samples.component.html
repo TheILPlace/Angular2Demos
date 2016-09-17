@@ -1,0 +1,86 @@
+
+<h1> Directives Demo</h1>
+
+<h2> Demo 1 Attribute Directives - ngClass, ngStyle</h2>
+
+set css class with <b>ngClass</b>:   
+<div [ngClass]="{border: false, background: true}"></div>
+
+<div [ngClass]="{border: true, background: true}"></div>
+
+<hr>
+
+change css class with <b>property binding</b> (one class) setting border only
+<div [class.border]="true"></div>
+
+change css class with <b>ngStyle</b>
+<div [ngStyle]="{'background-color':'red'}"></div>
+
+<hr>
+
+<h2> Demo 2 Custom Directives - highlight directive </h2>
+<div highlight>My Demo Text</div>
+
+<hr>
+<h2> Demo 3 Custom Directives - HostListener </h2>
+<div highlight-mouse>My mouse Demo</div>
+
+
+<hr>
+<h2> Demo 4 Custom Directives - HostListener + Property Binding </h2>
+<div highlight-mouse-binding [highlightColor]="'red'" [defaultColor]="'blue'">My mouse Demo</div>
+<!-- if the name of the directive is equal to the name of the property
+you could use <div [highlight-mouse-binding]="'blue'"
+ -->
+
+<hr>
+<h2>Demo 5 - Structural Directives : *ngIf</h2>
+<section *ngIf="nowYouSeeMe"> Now you see me .....
+    <br> *ngIF total clicks: {{totalClicks}}
+</section>
+<br>
+<!--De-Sugar-->
+<template [ngIf]="nowYouSeeMe">
+    <section>
+        ngIF total clicks: {{totalClicks}}
+    </section>
+</template>
+
+<button (click)="onShowMeClick()">Switch</button>
+
+
+<hr>
+<h2>Demo 6 - Structural Directives : *ngFor</h2>
+<section> 
+    <ul>
+        <li *ngFor="let item of ngForItems; let i = index">item {{i}}: {{item}}</li>
+    </ul>
+</section>
+
+
+<hr>
+<h2>Demo 7 - Structural Directives : ngSwitch</h2>
+
+<input type="text" [(ngModel)]="myColorCode"  placeholder="enter color code" />
+{{myColorCode}}
+
+<section [ngSwitch]="myColorCode">
+    <p *ngSwitchCase="'1'">Blue</p>
+    <p *ngSwitchCase="'2'">Red</p>
+    <p *ngSwitchCase="'3'">Black</p>
+    <p *ngSwitchDefault>No Color Matched for {{myColorCode}}</p>
+</section>
+
+<section [ngSwitch]="myColorCode">
+    <template [ngSwitchCase]="'1'">Blue</template>
+    <template [ngSwitchCase]="'2'">Red</template>
+    <template [ngSwitchCase]="'3'">Black</template>
+    <template ngSwitchDefault>No Color Matched for {{myColorCode}}</template>
+</section>
+
+<hr>
+<h2>Demo 8- Custom Structural Directives : notIF</h2>
+<section *notIF="nowYouSeeMe"> Now you see me .....
+    <br> *notIF total clicks: {{totalClicks}}
+</section>
+
