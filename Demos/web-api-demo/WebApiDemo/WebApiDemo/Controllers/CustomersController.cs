@@ -14,15 +14,27 @@ namespace WebApiDemo.Controllers
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            WebApiDemo.BL.CustomersBL myBL = new WebApiDemo.BL.CustomersBL();
+            
 
             List<Customer> myList = new List<Customer>();
-            myList = myBL.GetCustomers();
-
-
+            myList = GetAllCustomers();
+            
             return Request.CreateResponse(HttpStatusCode.OK, myList);  
 
 
+        }
+
+
+      
+
+
+        private List<Customer>  GetAllCustomers()
+        {
+
+            WebApiDemo.BL.CustomersBL myBL = new WebApiDemo.BL.CustomersBL();
+
+            
+            return myBL.GetCustomers();
         }
 
 

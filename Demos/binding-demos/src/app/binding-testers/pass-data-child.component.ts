@@ -9,7 +9,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
         <button (click)="decrement();" class="counter__button">
           -
         </button>
-        <input type="text" class="counter__input" [value]="counterValue">
+        <input type="text" class="counter__input" [value]="counterValue" readonly>
         <button (click)="increment();" class="counter__button">
           +
         </button>

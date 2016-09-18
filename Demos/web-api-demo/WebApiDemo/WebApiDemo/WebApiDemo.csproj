@@ -108,6 +108,9 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BL\CustomersBL.cs" />
+    <Compile Include="Controllers\Customers2Controller.cs" />
+    <Compile Include="Controllers\Values1Controller.cs" />
+    <Compile Include="Controllers\Values2Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

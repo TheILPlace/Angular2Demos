@@ -5,11 +5,22 @@ import { Customer } from './customer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
+  styles: [`
+    .center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+      } 
+  `]
 })
 export class AppComponent {
   items: any[] = [];
+  
   asyncString = this.httpService.getData();
+
+
   customers: Customer[];
   newCustomerID: any = 0 ;
 
@@ -39,7 +50,6 @@ export class AppComponent {
     this.httpService.getData()
       .subscribe(
         data => {
-          
           this.customers = data;
         }
       );

@@ -5,16 +5,17 @@ import { NgForm } from "@angular/forms";
   selector: 'template-driven',
   templateUrl: 'template-driven.component.html',
   styles: [`
-    .ng-invalid {
+    .field-invalid {
       border: 1px solid red;
     }
+
   `]
 })
 export class TemplateDrivenComponent {
   user = {
-    username: 'Max',
-    email: 'chris@test.com',
-    password: 'test',
+    username: 'MyUserName',
+    email: 'yolo@walla.com',
+    password: 'MyPassword',
     gender: 'male'
   };
 

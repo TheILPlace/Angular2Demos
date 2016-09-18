@@ -23,7 +23,7 @@ export class DataDrivenComponent {
   constructor(private formBuilder: FormBuilder) {
     // this.myForm = new FormGroup({
     //   'userData': new FormGroup({
-    //     'username': new FormControl('Max', Validators.required),
+    //     'username': new FormControl('Achi', Validators.required),
     //     'email': new FormControl('', [
     //       Validators.required,
     //       Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
@@ -38,7 +38,7 @@ export class DataDrivenComponent {
 
     this.myForm = formBuilder.group({
       'userData': formBuilder.group({
-        'username': ['Max', [Validators.required, this.exampleValidator]],
+        'username': ['Achi', [Validators.required, this.exampleValidator]],
         'email': ['', [
           Validators.required,
           Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")

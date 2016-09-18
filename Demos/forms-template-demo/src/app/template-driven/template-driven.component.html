@@ -1,6 +1,6 @@
 <h1>Template Driven</h1>
 <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-  <div ngModelGroup="userData">
+  <!--<div ngModelGroup="userData">-->
     <div class="form-group">
       <label for="username">Username</label>
       <input type="text"
@@ -8,7 +8,9 @@
              id="username"
              [(ngModel)]="user.username"
              name="username"
-             required>
+             required
+             #username="ngModel"
+             [ngClass]="{'field-invalid': !username.valid}">
     </div>
     <div class="form-group">
       <label for="email">E-Mail</label>
@@ -19,12 +21,14 @@
              name="email"
              required
              pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-             #email="ngModel">
+             #email="ngModel"
+             [ngClass]="{'field-invalid': !email.valid}">
+             
       <div *ngIf="!email.valid">
         Invalid email
       </div>
     </div>
-  </div>
+  <!--</div>-->
   <div class="form-group">
     <label for="password">Password</label>
     <input type="password"
@@ -32,7 +36,9 @@
            id="password"
            [(ngModel)]="user.password"
            name="password"
-           required>
+           required
+           #password="ngModel"
+           [ngClass]="{'field-invalid': !password.valid}">
   </div>
   <div class="radio" *ngFor="let g of genders">
     <label>

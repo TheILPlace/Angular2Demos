@@ -7,12 +7,9 @@ import { Component, Input} from '@angular/core';
     <p>
       This is 'result' bindig: {{result}}
     </p>
-  `,
-  styles: []
+  `
 })
 export class CustomPropertiesComponent {
 
 @Input() result: number = 0;
-  
-
 }

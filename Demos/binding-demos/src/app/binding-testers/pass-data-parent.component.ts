@@ -1,5 +1,5 @@
 import { Component,ViewChild } from '@angular/core';
-//import { PassDataChildComponent} from './pass-data-child.component';
+import { PassDataChildComponent} from './pass-data-child.component';
 
 //https://angular.io/docs/ts/latest/cookbook/component-communication.html
 @Component({
@@ -8,7 +8,7 @@ import { Component,ViewChild } from '@angular/core';
   template: `
     <div class="app">
       
-      Counter: <app-pass-data-child [counterValue]="myValue" 
+      Counter: <app-pass-data-child [counterValue]="startValue" 
       (counterChange)="myValueChange($event);" #child></app-pass-data-child>
 
     </div>
@@ -19,15 +19,17 @@ import { Component,ViewChild } from '@angular/core';
     </div>
 
     <div>
-      using local variable: Value: {{myValue2 }}
+      using local variable: Value: {{localValue }}
       <br>
     </div>
 
 
-    <!--div>
+    <div>
       using ViewChild: Value: {{childComponent.counterValue }}
       <br>
-    </div-->
+      <button (click)="child.increment()">Click Client Increment !! </button>
+      <br>
+    </div>
 
   `,
   styles: [`
@@ -41,15 +43,16 @@ import { Component,ViewChild } from '@angular/core';
 })
 export class PassDataParentComponent  {
 
- public myValue:number = 2;
- public myValue2:number = 2;
+ public startValue:number = 0;
+ 
+ public localValue:number = 0;
 
-//  @ViewChild(PassDataChildComponent)
-//  childComponent: PassDataChildComponent;
+  @ViewChild(PassDataChildComponent)
+  childComponent: PassDataChildComponent;
 
  
 myValueChange(event) {
-    this.myValue2 = event.value;
+    this.localValue = event.value;
   }
 
 

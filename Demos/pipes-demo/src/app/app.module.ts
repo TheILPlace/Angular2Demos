@@ -7,6 +7,7 @@ import { FilterPipe } from "./filter.pipe";
 import { DoublePipe } from "./double.pipe";
 
 
+
 @NgModule({
     declarations: [AppComponent, FilterPipe, DoublePipe],
     imports: [BrowserModule,FormsModule],
