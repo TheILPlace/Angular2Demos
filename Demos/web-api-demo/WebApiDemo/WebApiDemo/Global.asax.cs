@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
+using WebApiDemo.App_Start;
 
 namespace WebApiDemo
 {
@@ -12,6 +13,10 @@ namespace WebApiDemo
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+
+            // add authorization filters 
+            FilterConfig.RegisterWebApiFilters(GlobalConfiguration.Configuration.Filters);
+
         }
 
 

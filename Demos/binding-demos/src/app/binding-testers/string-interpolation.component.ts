@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
     
     <br>
     <h1>{{mytext}}</h1>
+    <br>
+    <ng-content></ng-content>
   `
 })
 export class StringInterpolationComponent {

@@ -14,7 +14,7 @@ export class PropertyBindingComponent {
 
   isItTrue(){
 
-    return false;
+    return true;
   }
 
 }

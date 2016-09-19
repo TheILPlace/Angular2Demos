@@ -28,7 +28,7 @@ export class HttpService {
   }
 
   getData() {
-    return this.http.get('http://localhost:4300/api/Customers')
+    return this.http.get('http://localhost/WebApiDemo/api/Customers')
       .map((response: Response) => response.json());
   }
 
@@ -36,7 +36,7 @@ export class HttpService {
     const body = JSON.stringify(user);
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:4300/api/Customers', body, {
+    return this.http.post('http://localhost/WebApiDemo/api/Customers', body, {
       headers: headers
     })
       .map((data: Response) => data.json())

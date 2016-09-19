@@ -14,12 +14,12 @@ import { PassDataChildComponent} from './pass-data-child.component';
     </div>
 
     <div>
-      using child variable: Value: {{child.counterValue}}
+      using child variable via local variable: Value: {{child.counterValue}}
       <br>
     </div>
 
     <div>
-      using local variable: Value: {{localValue }}
+      using component local variable: Value: {{localValue }}
       <br>
     </div>
 

@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class BindingSamplesComponent  {
 
+
+
 showAlert(value:string){
   alert(value + ' father component');
 }

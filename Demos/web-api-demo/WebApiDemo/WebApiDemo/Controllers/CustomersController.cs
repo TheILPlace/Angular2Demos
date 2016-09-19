@@ -11,11 +11,11 @@ namespace WebApiDemo.Controllers
 {
     public class CustomersController : ApiController
     {
+       // [Authorize]
         [HttpGet]
         public HttpResponseMessage Get()
         {
             
-
             List<Customer> myList = new List<Customer>();
             myList = GetAllCustomers();
             
@@ -40,7 +40,7 @@ namespace WebApiDemo.Controllers
 
 
         [HttpPost]
-        public HttpResponseMessage Post(Customer customer)
+        public HttpResponseMessage Post([FromBody] Customer customer)
         {
             WebApiDemo.BL.CustomersBL myBL = new WebApiDemo.BL.CustomersBL();
 

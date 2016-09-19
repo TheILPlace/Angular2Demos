@@ -17,29 +17,29 @@ namespace WebApiDemo
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            //config.Routes.MapHttpRoute(
-            //    name: "DefaultApi",
-            //    routeTemplate: "api/{controller}/{id}",
-            //    defaults: new { id = RouteParameter.Optional }
-            //);
-
             config.Routes.MapHttpRoute(
-              name: "ActionApi",
-              routeTemplate: "api2/{controller}/{action}/{id}",
-              defaults: new { id = RouteParameter.Optional }
-          );
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
 
-            config.Routes.MapHttpRoute(
-              name: "values1",
-              routeTemplate: "test/v1/values/{id}",
-              defaults: new { id = RouteParameter.Optional, controller = "Values1" }
-          );
+          //  config.Routes.MapHttpRoute(
+          //    name: "ActionApi",
+          //    routeTemplate: "api2/{controller}/{action}/{id}",
+          //    defaults: new { id = RouteParameter.Optional }
+          //);
 
-            config.Routes.MapHttpRoute(
-              name: "values2",
-              routeTemplate: "test/v2/values/{id}",
-              defaults: new { id = RouteParameter.Optional, controller = "Values2" }
-          );
+          //  config.Routes.MapHttpRoute(
+          //    name: "values1",
+          //    routeTemplate: "test/v1/values/{id}",
+          //    defaults: new { id = RouteParameter.Optional, controller = "Values1" }
+          //);
+
+          //  config.Routes.MapHttpRoute(
+          //    name: "values2",
+          //    routeTemplate: "test/v2/values/{id}",
+          //    defaults: new { id = RouteParameter.Optional, controller = "Values2" }
+          //);
 
 
           
