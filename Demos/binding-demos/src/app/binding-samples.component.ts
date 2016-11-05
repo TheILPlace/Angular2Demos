@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class BindingSamplesComponent  {
 
 
+private outerValue:string="initial value";
+
 
 showAlert(value:string){
   alert(value + ' father component');

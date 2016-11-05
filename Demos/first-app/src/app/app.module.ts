@@ -5,11 +5,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SecondTryComponent } from './second-try.component';
+import { ThirdTryComponent } from './third-try.component';
+import { FourthTryComponent } from './fourth-try/fourth-try.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SecondTryComponent
+    SecondTryComponent,
+    ThirdTryComponent,
+    FourthTryComponent
+    
   ],
   imports: [
     BrowserModule,

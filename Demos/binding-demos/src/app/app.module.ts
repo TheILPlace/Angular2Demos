@@ -8,7 +8,7 @@ import { BindingSamplesComponent } from './binding-samples.component';
 
 
 import { StringInterpolationComponent, PropertyBindingComponent , CustomPropertiesComponent, 
-    EventBindingComponent,CustomEventBindingComponent,TwoWayBindingComponent,
+    EventBindingComponent,CustomEventBindingComponent,TwoWayBindingComponent,TwoWayBindingCustomComponent,
     PassDataParentComponent,PassDataChildComponent
 } from './binding-testers' //we use the index.ts file !
 
@@ -18,6 +18,7 @@ import { StringInterpolationComponent, PropertyBindingComponent , CustomProperti
     declarations: [AppComponent,BindingSamplesComponent,
     StringInterpolationComponent,PropertyBindingComponent,
     CustomPropertiesComponent,EventBindingComponent,CustomEventBindingComponent,TwoWayBindingComponent,
+    TwoWayBindingCustomComponent,
     PassDataParentComponent,PassDataChildComponent],
     imports:      [BrowserModule,FormsModule],
     bootstrap:    [AppComponent],

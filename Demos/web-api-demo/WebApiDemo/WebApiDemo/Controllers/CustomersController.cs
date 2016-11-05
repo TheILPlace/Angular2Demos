@@ -24,8 +24,18 @@ namespace WebApiDemo.Controllers
 
         }
 
+        [HttpGet]
+        public HttpResponseMessage Get(int id)
+        {
 
-      
+            List<Customer> myList = new List<Customer>();
+            myList = GetAllCustomers();
+
+            return Request.CreateResponse(HttpStatusCode.OK, myList[0]);
+
+
+        }
+
 
 
         private List<Customer>  GetAllCustomers()

@@ -12,6 +12,7 @@ namespace WebApiDemo.Models
         public string LastName;
         public string Address;
         public string PhoneNumber;
+        public List<Address> MyAddresses;
 
     }
 }
