@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
 import { CustomerComponent } from './customer.component';
 import { Customer2Component } from './customer2.component';
+import { Customer3Component } from './customer3.component';
   
 
 import { routing } from "./app.routes";
@@ -23,7 +24,7 @@ import {CustomerDetailResolve} from './customer-detail-resolve';
   declarations: [
     AppComponent,
     HomeComponent,
-    CustomerComponent,Customer2Component
+    CustomerComponent,Customer2Component,Customer3Component
   ],
   imports: [
     BrowserModule,

@@ -45,8 +45,61 @@ export class DataService {
      
   }
 
+ getAllCustomersData() : Observable<Customer[]>
+  {
+    let tmpCustomer:Customer;
+    
+    return this.httpService.genGetData(this.dataServiceUrl )
+      .map((res:Response) => res.json() );
+    
+     
+  }
 
 
+getAllCustomersData2(): Observable<Customer[]> {
+   
+
+   let tmpCustomers:Customer[];
+   return Observable.create(observer => {
+      this.httpService.genGetData(this.dataServiceUrl )
+          .map(res => res.json())
+          .subscribe((data) => {
+             tmpCustomers = data
+
+             observer.next(tmpCustomers);
+             observer.complete();
+          });
+   });
+}
+
+
+
+// getAllCustomersData22() : Observable<Customer[]>
+//   {
+//      let tmpCustomers:Customer[];
+    
+
+
+
+//      return Observable.create(observer =>{
+
+//       this.httpService.genGetData(this.dataServiceUrl )
+//       .map((res:Response) => res.json() )
+//       .subscribe(
+//         (data: Customer[]) => {
+//           tmpCustomers = data
+//           observer.next(tmpCustomers);
+//           observer.complete();
+     
+
+//           }) 
+//         }
+//       );
+      
+
+    
+     
+//   }
 
 
 }

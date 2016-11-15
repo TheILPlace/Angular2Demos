@@ -15,10 +15,6 @@ import {ActivatedRoute} from '@angular/router';
     {{firstName  }} is here
 
 
-    
-
-
-
   `,
   styles: []
 })

@@ -5,7 +5,7 @@ import { Component, Input, Output,EventEmitter } from '@angular/core';
   selector: 'app-two-way-binding-custom-component',
   template: `
     <div>
-      <input type="text" [(ngModel)]="myvalue" (change)="onchange($event)">
+      <input type="text" [(ngModel)]="myvalue" (keyup)="onchange($event)">
       <button (click)="update_parent();">Update parent</button>
       
       <h3>inner value:  {{myvalue}}</h3>
@@ -23,7 +23,7 @@ export class TwoWayBindingCustomComponent {
 onchange(event)
   {
     
-    console.log('child::onchange() => value:' + event);
+    console.log('child::onchange() => value:' + event.value);
     this.myvalueChange.emit(event.srcElement.value);
   }
 
