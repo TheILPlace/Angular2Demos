@@ -21,7 +21,8 @@ export class TemplateDrivenComponent {
 
   genders = [
     'male',
-    'female'
+    'female',
+    'other'
   ];
 
   onSubmit(form: NgForm) {

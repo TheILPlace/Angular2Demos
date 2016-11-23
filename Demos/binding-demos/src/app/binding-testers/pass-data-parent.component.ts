@@ -43,7 +43,7 @@ import { PassDataChildComponent} from './pass-data-child.component';
 })
 export class PassDataParentComponent  {
 
- public startValue:number = 0;
+ public startValue:number = 10;
  
  public localValue:number = 0;
 

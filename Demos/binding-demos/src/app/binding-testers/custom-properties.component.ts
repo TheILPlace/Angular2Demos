@@ -5,7 +5,7 @@ import { Component, Input} from '@angular/core';
   selector: 'app-custom-properties',
   template: `
     <p>
-      This is 'result' bindig: {{result}}
+      This is 'result' binding: {{result+1}}
     </p>
   `
 })

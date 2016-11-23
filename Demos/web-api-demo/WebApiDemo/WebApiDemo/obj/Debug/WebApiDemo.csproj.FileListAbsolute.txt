@@ -31,4 +31,10 @@ C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\System.Web.Http.xml
 C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\System.Web.Http.WebHost.xml
 C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\obj\Debug\WebApiDemo.dll
 C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\obj\Debug\WebApiDemo.pdb
-C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\obj\Debug\WebApiDemo.csprojResolveAssemblyReference.cache
+C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.Poco2Ts.dll
+C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.TypeScriptCodeDom.dll
+C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.Web.Meta.dll
+C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.Web.MetaTransform.dll
+C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.WebApiClientGen.dll
+C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.Poco2Ts.xml
+C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.TypeScriptCodeDom.xml

@@ -43,7 +43,7 @@ export class Tester1Component {
     }
 
     onGet() {
-       // we ca use .slice(0) just to create a NEW array and not get 
+       // we can use .slice(0) just to create a NEW array and not get 
        //a pointer to the data in the dataService
        this.items = this.dataService.getData();
     }

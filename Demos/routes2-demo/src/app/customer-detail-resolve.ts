@@ -21,7 +21,7 @@ export class CustomerDetailResolve implements Resolve<Customer> {
     return this.dataService.getCustomerData(id)
     .map((res:Customer) => 
     {
-       if (res.firstName == 'Dan')
+       if (res.firstName == '1Dan')
         this.router.navigate(['home']);
        return res; 
 
