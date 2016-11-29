@@ -54,7 +54,8 @@ nav(){
 
   ngOnInit() {
     
-       this.getData2();
+       this.getData3();
+       this.getData3obs();
        
   }
 
@@ -85,6 +86,29 @@ getData2(){
 
 
 }
+
+
+ getData3(){
+   
+    this.dataService.getAllCustomersData3()
+    .subscribe(
+        (data: Customer[]) => {
+          this.myCustomers = data;
+          this.myCustomers[0].firstName="yoyo";
+        }
+      );
+
+  }
+
+ getData3obs(){
+   let _customersObservable: Observable<Customer[]>;
+    _customersObservable= this.dataService.getAllCustomersData3();
+    
+    this.obsMyCustomers = _customersObservable;
+  }
+
+
+
 
 
 }

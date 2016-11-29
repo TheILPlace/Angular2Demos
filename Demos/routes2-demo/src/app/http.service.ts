@@ -33,6 +33,14 @@ export class HttpService {
       //.map((response: Response) => response);
   }
 
+
+   genGetData3(url:string) {
+    return this.http.get(url)
+      .map((response: Response) => response.json());
+      
+      //.map((response: Response) => response);
+  }
+
   genSendData(url:string, user: any) {
     const body = JSON.stringify(user);
     const headers = new Headers();

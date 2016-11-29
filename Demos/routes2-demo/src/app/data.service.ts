@@ -72,7 +72,15 @@ getAllCustomersData2(): Observable<Customer[]> {
    });
 }
 
-
+ getAllCustomersData3() : Observable<Customer[]>
+  {
+    let tmpCustomer:Customer;
+    
+    return this.httpService.genGetData3(this.dataServiceUrl );
+      //.map((res:Response) => res.json() );
+    
+     
+  }
 
 // getAllCustomersData22() : Observable<Customer[]>
 //   {
