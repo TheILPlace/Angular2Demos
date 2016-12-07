@@ -16,7 +16,7 @@ function validateInputNameFactory() : ValidatorFn {
     } else {
       return {
         validateAchiName: {
-          valid: false
+          valid2: false
         }
       };
     }
