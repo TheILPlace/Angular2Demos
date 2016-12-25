@@ -11,6 +11,8 @@ import { SharedModule }   from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
 
+import {CustomPreloadingStrategy} from './preload/custom-preloading.strategy';
+
 
 
 @NgModule({
@@ -26,7 +28,7 @@ import { AppComponent } from './app.component';
     SharedModule.forRoot(),
     HomeModule
   ],
-  providers: [],
+  providers: [CustomPreloadingStrategy],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
