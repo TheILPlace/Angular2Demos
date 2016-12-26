@@ -1,0 +1,20 @@
+<div>
+    <h3>SignalR w/ Angular 2 demo</h3>
+</div>
+
+<div>
+    <span>Connection state: {{connectionState$ | async}}</span><br>
+    <input type="text"  #myInput />
+    <button (click)="sayHello(myInput.value);">Say Hi</button>
+</div>
+
+<div>
+<ul>
+    <li *ngFor="let message of messages">
+        {{message}}
+    </li>
+
+</ul>
+
+
+</div>
