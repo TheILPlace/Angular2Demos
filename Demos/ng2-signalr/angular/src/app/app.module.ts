@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { SignalrClientTesterComponent} from './signalr/signalr-client-tester.component';
 import {ChannelService, ChannelConfig, SignalrWindow} from "./signalr/channel.service";
 
+import {Signalr2Service} from './signalr2/signalr2.service';
+import { Signalr2ClientTesterComponent} from './signalr2/signalr2-client-tester.component';
+
 
 let channelConfig = new ChannelConfig();  
 channelConfig.url = "http://localhost:9820/signalr";  
@@ -14,7 +17,8 @@ channelConfig.hubName = "NotificationsHub";
 
 @NgModule({
   declarations: [
-    AppComponent,SignalrClientTesterComponent
+    AppComponent,SignalrClientTesterComponent,
+    Signalr2ClientTesterComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,9 @@ channelConfig.hubName = "NotificationsHub";
   ],
   providers: [
     ChannelService, 
+    Signalr2Service,
     { provide: SignalrWindow, useValue: window },
+     
     { provide: 'channel.config', useValue: channelConfig }
   ],
   bootstrap: [AppComponent]

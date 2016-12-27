@@ -1,13 +1,13 @@
 import { Component, OnInit,OnDestroy,  ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable'
-import { ChannelService, ConnectionState } from './channel.service'
+import { Signalr2Service, ConnectionState } from './signalr2.service'
 
 @Component({
-  selector: 'signalr-tester',
-  templateUrl: './signalr-client-tester.component.html',
+  selector: 'signalr2-tester',
+  templateUrl: './signalr2-client-tester-component.html',
   styles: []
 })
-export class SignalrClientTesterComponent implements OnInit{
+export class Signalr2ClientTesterComponent implements OnInit{
     // An internal "copy" of the connection state stream used because
     //  we want to map the values of the original stream. If we didn't 
     //  need to do that then we could use the service's observable 
@@ -21,21 +21,15 @@ export class SignalrClientTesterComponent implements OnInit{
 
 
 
-    constructor(private channelService: ChannelService,
+    constructor(private signalr2Service: Signalr2Service,
     private cd: ChangeDetectorRef) {
       
       
       
       // Let's wire up to the signalr observables
-      //
-    //   this.connectionState$ = this.channelService.connectionState$
-    //     .map((state: ConnectionState) => { 
-    //         this.cd.detectChanges();
-    //         return ConnectionState[state]; 
-    //         });
+ 
 
-
-       this.channelService.connectionState$.subscribe(
+       this.signalr2Service.connectionState$.subscribe(
            (state: ConnectionState) => { 
              
              this.connectionState2 = ConnectionState[state]; 
@@ -44,7 +38,7 @@ export class SignalrClientTesterComponent implements OnInit{
        ) 
 
 
-      this.channelService.error$.subscribe(
+      this.signalr2Service.error$.subscribe(
           (error: any) => { console.warn(error); },
           (error: any) => { console.error("errors$ error", error); }
       );
@@ -52,7 +46,7 @@ export class SignalrClientTesterComponent implements OnInit{
       // Wire up a handler for the starting$ observable to log the
       //  success/fail result
       //
-      this.channelService.starting$.subscribe(
+      this.signalr2Service.starting$.subscribe(
           () => { console.log("signalr service has been started"); },
           () => { console.warn("signalr service failed to start!"); }
       );
@@ -67,9 +61,9 @@ export class SignalrClientTesterComponent implements OnInit{
       // Start the connection up!
       console.log('Starting the channel service');
 
-      this.channelService.start();
+      this.signalr2Service.start();
 
-       this.subscription = this.channelService.sub().subscribe(
+       this.subscription = this.signalr2Service.hello.subscribe(
             (x: string) => {
                     this.messages.push(x);
                     //console.log(x);
@@ -77,7 +71,7 @@ export class SignalrClientTesterComponent implements OnInit{
           }
       ,
       (error: any) => {
-          console.warn("Attempt to join channel failed!", error);
+          console.warn("Attempt to subscribe to hello failed!", error);
       }
     )
 
@@ -91,7 +85,7 @@ export class SignalrClientTesterComponent implements OnInit{
 
     sayHello(message:string){
         console.log("sending: ", message)
-       this.channelService.publish(message); 
+       this.signalr2Service.publish(message); 
 
     }
 
