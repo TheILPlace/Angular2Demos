@@ -7,9 +7,7 @@ declare var $: any;
 
 /**
  * When SignalR runs it will add functions to the global $ variable 
- * that you use to create connections to the hub. However, in this
- * class we won't want to depend on any global variables, so this
- * class provides an abstraction away from using $ directly in here.
+ * that you use to create connections to the hub.
  */
 
 export enum ConnectionState {  
@@ -25,20 +23,8 @@ export class ChannelConfig {
     
 }
 
-
-
-
-/**
- * ChannelService is a wrapper around the functionality that SignalR
- * provides to expose the ideas of channels and events. With this service
- * you can subscribe to specific channels (or groups in signalr speak) and
- * use observables to react to specific events sent out on those channels.
- */
 @Injectable()
 export class Signalr2Service {
-
-    
-
 
     /**
      * starting$ is an observable available to know if the signalr 
@@ -125,12 +111,9 @@ export class Signalr2Service {
 
             if (newState ===ConnectionState.Disconnected)
             {
-                
                     setTimeout(() => {
-                    
                        this.start();
-
-                    }, 5000); // Restart connection after 5 seconds.
+                 }, 5000); // retry to connect every 5 seconds.
                     
             }
 
@@ -147,8 +130,6 @@ export class Signalr2Service {
 
          this.registerOnServerEvents();
 
-
-       
     }
 
      registerOnServerEvents(): void {
@@ -183,11 +164,7 @@ export class Signalr2Service {
     }
 
    
-   
-    /** publish provides a way for calles to emit events on any channel. In a 
-     * production app the server would ensure that only authorized clients can
-     * actually emit the message, but here we're not concerned about that.
-     */
+    //sample call to a server method//
     publish(myMessage: string): void {
         this.hubProxy.invoke("SendHello", myMessage);
     }

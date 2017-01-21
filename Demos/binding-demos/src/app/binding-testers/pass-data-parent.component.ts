@@ -51,7 +51,7 @@ export class PassDataParentComponent  {
   childComponent: PassDataChildComponent;
 
  
-myValueChange(event) {
+  myValueChange(event) {
     this.localValue = event.value;
   }
 

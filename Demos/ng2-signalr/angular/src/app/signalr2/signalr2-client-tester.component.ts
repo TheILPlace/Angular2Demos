@@ -81,6 +81,13 @@ export class Signalr2ClientTesterComponent implements OnInit{
     ngOnDestroy(){
         this.subscription.unsubscribe();
 
+    
+    // this.subscriptions.forEach(sub => sub.unsubscribe());
+    // this.subscriptions.length = 0;
+  //}
+ 
+
+
     }
 
     sayHello(message:string){
