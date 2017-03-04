@@ -4,14 +4,14 @@
 <h2> Demo 1 Attribute Directives - ngClass, ngStyle</h2>
 
 set css class with <b>ngClass</b>:   
-<div [ngClass]="{border: false, background: true}"></div>
+<div [ngClass]="{border1: false, background1: true}"></div>
 
-<div [ngClass]="{border: true, background: true}"></div>
+<div [ngClass]="{border1: true, background1: true}"></div>
 
 <hr>
 
 change css class with <b>property binding</b> (one class) setting border only
-<div [class.border]="true"></div>
+<div [class.border1]="true"></div>
 
 change css class with <b>ngStyle</b>
 <div [ngStyle]="{'background-color':'red'}"></div>
@@ -20,8 +20,6 @@ change css class with <b>ngStyle</b>
 
 <h2> Demo 2 Custom Directives - highlight directive </h2>
 <div highlight>My Demo Text</div>
-
-
 
 
 <hr>

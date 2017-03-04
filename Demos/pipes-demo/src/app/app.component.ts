@@ -32,8 +32,11 @@ export class AppComponent {
 
   pushValue(input:any){
     this.values.push(input);
+
+    //this.values = this.values.slice(0);
+
     console.log("entered: " + input);
-    ;
+    
     
 
   }

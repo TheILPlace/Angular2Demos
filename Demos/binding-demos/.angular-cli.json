@@ -1,16 +1,13 @@
 {
   "project": {
-    "version": "1.0.0-beta.19-3",
-    "name": "routes2-demo"
+    "version": "1.0.0-beta.14",
+    "name": "binding-demos"
   },
   "apps": [
     {
       "root": "src",
       "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
+      "assets": "assets",
       "index": "index.html",
       "main": "main.ts",
       "test": "test.ts",
@@ -21,8 +18,8 @@
         "styles.css"
       ],
       "scripts": [],
+      "environmentSource": "environments/environment.ts",
       "environments": {
-        "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
@@ -42,18 +39,6 @@
   },
   "defaults": {
     "styleExt": "css",
-    "prefixInterfaces": false,
-    "inline": {
-      "style": false,
-      "template": false
-    },
-    "spec": {
-      "class": false,
-      "component": true,
-      "directive": true,
-      "module": false,
-      "pipe": true,
-      "service": true
-    }
+    "prefixInterfaces": false
   }
 }

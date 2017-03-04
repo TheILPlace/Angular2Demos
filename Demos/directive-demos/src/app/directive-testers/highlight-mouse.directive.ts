@@ -5,16 +5,16 @@ import { Directive, HostListener, HostBinding } from '@angular/core';
 })
 export class HighlightMouseDirective {
 
-private backgroundColor =  'white';
+private whatColorYouWant =  'white';
 
 //the event of the host element to listen to
 @HostListener('mouseenter') mouseenter(){
-    this.backgroundColor='green';
+    this.whatColorYouWant='green';
 }
 
 //the event of the host element to listen to
 @HostListener('mouseleave') mouseleave(){
-    this.backgroundColor='white';
+    this.whatColorYouWant='white';
 }
 
  numberOfClicks = 0;
@@ -32,7 +32,7 @@ private backgroundColor =  'white';
 // getter function - typescript
 @HostBinding('style.backgroundColor') get setColor()
 {
-    return this.backgroundColor;
+    return this.whatColorYouWant;
 
 }
 

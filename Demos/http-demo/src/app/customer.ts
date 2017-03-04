@@ -7,7 +7,5 @@ export class Customer {
     public address: string,
     public phone: string) { 
 
-
-
     }
 }
