@@ -26,8 +26,12 @@ Id Created = {{newCustomerID}}
 
 Get customers Async
 
-<p>{{asyncString | async | json }}</p>
+<p>{{asyncCustomers$ | async | json }}</p>
 
+
+<ul>
+  <li *ngFor="let customer of asyncCustomers$ | async">{{customer.lastName}}, {{customer.firstName}}</li>
+</ul>
 <hr>
 <my-wiki></my-wiki>
 

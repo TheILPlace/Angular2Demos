@@ -1,4 +1,4 @@
-import { Component, OnInit,OnDestroy,  ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit,  ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable'
 import { ChannelService, ConnectionState } from './channel.service'
 

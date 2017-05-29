@@ -31,11 +31,12 @@ export class Tester1Component {
     value = '';
     items: string[] = [];
 
-    //inject the LogService and the DataService
+    // inject the LogService and the DataService
     constructor (private logService: LogService, private dataService: DataService) {}
 
     onLog(value: string) {
         this.logService.writeToLog(value);
+
     }
 
     onStore(value: string) {
@@ -44,7 +45,7 @@ export class Tester1Component {
 
     onGet() {
        // we can use .slice(0) just to create a NEW array and not get 
-       //a pointer to the data in the dataService
+       // a pointer to the data in the dataService
        this.items = this.dataService.getData();
     }
 

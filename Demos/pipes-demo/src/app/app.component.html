@@ -20,7 +20,7 @@
 
   <button (click)="pushValue(newItem.value)" class="btn btn-primary">Add Item</button>
   <ul>
-    <li *ngFor="let item of values | filter: myFilter">{{item}}</li>
+    <li *ngFor="let item of values | filterpipe: myFilter">{{item}}</li>
   </ul>
 
   <hr>

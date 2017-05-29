@@ -6,9 +6,9 @@ import { USER_ROUTES } from "./user/user.routes";
 
 const APP_ROUTES: Routes = [
     { path: 'user/:id', component: UserComponent},
-    { path: 'user/:id', component: UserComponent, children: USER_ROUTES },
+    { path: 'user/:id', component: UserComponent, children:   USER_ROUTES },
     { path: '', component: HomeComponent },
     { path: '**', redirectTo: '/user/1', pathMatch: 'full' }
 ];
 
-export const routing = RouterModule.forRoot(APP_ROUTES);
+export const routing = RouterModule.forRoot(APP_ROUTES,{enableTracing:true});

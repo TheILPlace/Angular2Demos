@@ -4,10 +4,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebApiDemo.Authorization;
 using WebApiDemo.Models;
 
 namespace WebApiDemo.Controllers
 {
+    [MyFilter(Params = "param1")]
     public class AchiController : ApiController
     {
         // GET: api/Tester

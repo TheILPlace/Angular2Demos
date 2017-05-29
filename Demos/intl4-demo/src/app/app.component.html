@@ -1,0 +1,11 @@
+<h1 i18n>Hello world!</h1>
+
+
+<ul>
+<li *ngFor="let lang of languages">
+    <span *ngIf="lang.code !== localeId">
+    <a href="/{{lang.code}}/index.html">{{lang.label}}</a> </span>
+  <span *ngIf="lang.code === localeId">{{lang.label}} </span>
+</li>
+</ul>
+

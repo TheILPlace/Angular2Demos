@@ -82,9 +82,9 @@ export class Signalr2Service {
         this.starting$ = this.startingSubject.asObservable();
 
         this.hubConnection = $.hubConnection();
-        this.hubConnection.url = channelConfig.url;
-        this.hubProxy = this.hubConnection.createHubProxy(channelConfig.hubName);
-
+        this.hubConnection.url = 'http://localhost:9820/signalr';//channelConfig.url;
+        //this.hubProxy = this.hubConnection.createHubProxy(channelConfig.hubName);
+this.hubProxy = this.hubConnection.createHubProxy('NotificationsHub');
         // Define handlers for the connection state events
         //
         this.hubConnection.stateChanged((state: any) => {

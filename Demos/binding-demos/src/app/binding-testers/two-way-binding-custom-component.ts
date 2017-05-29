@@ -16,14 +16,14 @@ import { Component, Input, Output,EventEmitter } from '@angular/core';
 export class TwoWayBindingCustomComponent {
 
  
-@Input() myvalue:string;
+@Input() myvalue: string;
 @Output() myvalueChange = new EventEmitter<string>(); 
 
 
 onchange(event)
   {
     
-    console.log('child::onchange() => value:' + event.value);
+    console.log('child::onchange() => value:' + event.srcElement.value);
     this.myvalueChange.emit(event.srcElement.value);
   }
 

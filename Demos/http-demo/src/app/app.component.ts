@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
-import { HttpService } from "./http.service";
+import { HttpService } from './http.service';
 import { Customer } from './customer';
 
 @Component({
@@ -15,10 +15,11 @@ import { Customer } from './customer';
       } 
   `]
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
+    subscription: any;
   items: any[] = [];
-  
-  asyncString = this.httpService.getData();
+
+  asyncCustomers$ = this.httpService.getData();
 
 
   customers: Customer[];
@@ -27,10 +28,10 @@ export class AppComponent {
   constructor(private httpService: HttpService) {}
 
   onSubmit(firstName: string, lastName: string, address: string, phone: string) {
-     //create the new customer
-     var newCustomer = new Customer(firstName,lastName,address,phone);
- 
-     //send to our http service
+     // create the new customer
+     let newCustomer: Customer = new Customer(firstName,lastName,address,phone);
+
+     // zsend to our http service
      this.httpService.sendData(newCustomer)
       .subscribe(
         data => {
@@ -47,9 +48,9 @@ export class AppComponent {
   }
 
   onGetData() {
-    this.httpService.getData()
+   this.subscription =  this.httpService.getData()
       .subscribe(
-        data => {
+        (data: Customer[])  => {
           this.customers = data;
         }
       );
@@ -70,6 +71,8 @@ export class AppComponent {
 //       );
 //   }
 
-
+ngOnDestroy() {
+  this.subscription.unsubscribe();
+}
 
 }

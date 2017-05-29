@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  
+
   selector: 'app-two-way-binding',
   template: `
     <div>
@@ -13,8 +13,8 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class TwoWayBindingComponent {
-person = {firstName:'achi',
-           lastName:'lottan'};
+person = {firstName: 'achi',
+           lastName: 'lottan'};
 
 
 }

@@ -30,7 +30,7 @@ private whatColorYouWant =  'white';
 
 //the propety of the host element to bind to
 // getter function - typescript
-@HostBinding('style.backgroundColor') get setColor()
+@HostBinding('style.backgroundColor') get getColor()
 {
     return this.whatColorYouWant;
 

@@ -38,3 +38,4 @@ C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.Web.MetaTransfor
 C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.WebApiClientGen.dll
 C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.Poco2Ts.xml
 C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\bin\Fonlow.TypeScriptCodeDom.xml
+C:\Angular2\Demos\web-api-demo\WebApiDemo\WebApiDemo\obj\Debug\WebApiDemo.csprojResolveAssemblyReference.cache

@@ -43,12 +43,12 @@ export class Tester2Component implements OnInit {
 
     onGet() {
         // we use .slice(0) just to create a NEW array and not get 
-       //a pointer to the data in the dataService
+       // a pointer to the data in the dataService
         this.items = this.dataService.getData();
     }
 
     ngOnInit() {
-        //subscribe to the event that the dataService Emits !
+        // subscribe to the event that the dataService Emits !
         this.dataService.distributedData.subscribe(
             data => this.receivedValue = data
         );

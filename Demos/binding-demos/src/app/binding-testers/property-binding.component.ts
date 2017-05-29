@@ -12,7 +12,7 @@ export class PropertyBindingComponent {
   myvalue = 'this text is from a variable';
 
 
-  isItTrue(){
+  isItTrue() {
 
     return true;
   }

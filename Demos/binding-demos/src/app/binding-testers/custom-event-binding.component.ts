@@ -14,6 +14,7 @@ export class CustomEventBindingComponent  {
 
 //the "outside" name of the event proprty is "clickMe"
 //while the inside implementation is "ouchYouClickedMe"
+
 @Output("clickMe") ouchYouClickedMe = new EventEmitter<string>();
 onClicked() {
   this.ouchYouClickedMe.emit('Yohoo !');

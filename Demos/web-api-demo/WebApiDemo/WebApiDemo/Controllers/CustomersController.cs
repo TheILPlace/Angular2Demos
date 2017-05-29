@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 using WebApiDemo.BL;
 using WebApiDemo.Models;
 
@@ -48,7 +49,7 @@ namespace WebApiDemo.Controllers
         }
 
 
-
+        [ResponseType(typeof(int))]
         [HttpPost]
         public HttpResponseMessage Post([FromBody] Customer customer)
         {

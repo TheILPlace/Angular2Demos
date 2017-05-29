@@ -12,6 +12,7 @@ namespace WebApiDemo.Authorization
     public class MyFilter: AuthorizeAttribute
     {
 
+        public string Params;
 
         protected override void HandleUnauthorizedRequest(System.Web.Http.Controllers.HttpActionContext actionContext)
         {
@@ -23,6 +24,7 @@ namespace WebApiDemo.Authorization
         }
         protected override bool IsAuthorized(System.Web.Http.Controllers.HttpActionContext actionContext)
         {
+            
             return true;
 
             if (DateTime.Today.Day == 19)

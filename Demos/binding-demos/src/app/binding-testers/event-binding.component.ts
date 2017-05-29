@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 })
 export class EventBindingComponent {
 
-  onClicked(){
+  onClicked() {
     alert('you clicked me !');
   }
  

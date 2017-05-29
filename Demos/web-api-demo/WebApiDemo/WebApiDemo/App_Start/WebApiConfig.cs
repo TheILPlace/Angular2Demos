@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using WebApiDemo.Authorization;
 
 namespace WebApiDemo
 {
@@ -12,6 +13,7 @@ namespace WebApiDemo
         {
             // Web API configuration and services
 
+            //config.Filters.Add(new MyFilter());
             config.EnableCors();
 
             // Web API routes

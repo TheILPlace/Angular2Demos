@@ -4,12 +4,14 @@ import { Subscription } from "rxjs/Rx";
 
 @Component({
   selector: 'app-home-component',
+  
   template: `
-    <h1>
+    <div class =  bgcolor><h1>
       Home Component!
     </h1>
     <hr>
     {{param}}
+    </div>
   `,
   styles: []
 })

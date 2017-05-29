@@ -17,6 +17,7 @@ import { Observable } from "rxjs/Rx";
 // import 'rxjs/add/operator/map';
 // import 'rxjs/add/operator/switchMap';
 // import 'rxjs/add/operator/toPromise';
+import { Customer } from './customer';
 
 
 
@@ -27,17 +28,17 @@ export class HttpService {
   constructor(private http: Http) {
   }
 
-  getData() {
+  getData(): Observable<Customer[]> {
     return this.http.get('http://localhost/WebApiDemo/api/Customers')
       .map((response: Response) => response.json());
   }
 
-  sendData(user: any) {
-    const body = JSON.stringify(user);
+  sendData(customer: Customer) {
+    const body = JSON.stringify(customer);
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost/WebApiDemo/api/Customers', body, {
-      headers: headers
+      headers: headers, withCredentials: true
     })
       .map((data: Response) => data.json())
       .catch(this.handleError);

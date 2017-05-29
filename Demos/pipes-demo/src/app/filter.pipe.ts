@@ -1,8 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter',
-  pure: false   /// impure pipe ! because we want change detection when data is changed
+  name: 'filterpipe',
+  pure: true   /// impure pipe ! because we want change detection when data is changed
                 /// inside the items in the array
 })
 export class FilterPipe implements PipeTransform {
