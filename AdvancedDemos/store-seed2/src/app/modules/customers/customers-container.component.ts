@@ -12,7 +12,7 @@ import { Customer } from './models/customer';
       customers-container Works!
     </p>
     <div>
-    
+
       <ach-customers-list [customers] = "customers$ | async"
         (customerAdded) = "onCustomerAdded($event)"
         (customerSelected) = "onCustomerSelected($event)"></ach-customers-list>

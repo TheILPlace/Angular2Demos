@@ -5,7 +5,6 @@ import * as _ from 'lodash';
     return _.cloneDeep(store.storeData.getValue());
   }
 
-  export function CloneUiState(store: Store): UiState
-   {
+  export function CloneUiState(store: Store): UiState {
     return _.cloneDeep(store.uiState.getValue());
   }

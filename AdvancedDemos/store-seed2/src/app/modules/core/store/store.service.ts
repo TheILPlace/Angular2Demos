@@ -72,8 +72,8 @@ export class StoreService {
 
   getSelectedCustomer(): Observable<Customer> {
 
-    return this._store.uiState.map(data => data.selectedCustomerID)
-      .switchMap((selectedCustomerId: number) => {
+      return this._store.uiState.map(data => data.selectedCustomerID)
+        .switchMap((selectedCustomerId: number) => {
         return this._store.storeData.map((data: StoreData) =>
           data.customers.filter((customer: Customer) => customer.id === selectedCustomerId)[0]);
       }

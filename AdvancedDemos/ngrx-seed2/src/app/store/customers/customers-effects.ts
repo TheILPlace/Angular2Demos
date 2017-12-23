@@ -37,7 +37,7 @@ export class CustomersEffects {
 @Effect()
   load$: Observable<Action> = this.actions$
   .ofType(customersActions.LOAD)
-    .switchMap((action: customersActions.LoadAction) =>
+    .switchMap((action) =>
       this.customersDataService.loadCustomers()
       .map((customers: Customer[]) => new customersActions.LoadCompletedAction(customers) )
 

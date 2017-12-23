@@ -21,6 +21,7 @@ export class CustomersGuardService implements CanActivate {
         // user to the route.
         return this.customersDataService.getIsCustomersLoaded()
             .filter(loaded => loaded)
+            .debounceTime(5000)
             .take(1);
 
     }

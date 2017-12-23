@@ -28,8 +28,8 @@ export function reducer(state = initialState, action: Action): State {
         case customers.LOAD:
         // do nothing. will happen in the effect
         case customers.LOAD_COMPLETED:
-            newstate.customers = _.cloneDeep(action.payload);
-            newstate.loaded = true;
+                newstate.customers = _.cloneDeep(action.payload);
+                newstate.loaded = true;
 
             break;
         case customers.SELECT:
@@ -63,7 +63,7 @@ export const getCustomers = (state: State) => state.customers;
 export const getIsLoaded = (state: State) => state.loaded;
 export const getSelectedCustomerId = (state: State) => state.selectedCustomerId;
 export const getSelectedCustomer = createSelector(getCustomers, getSelectedCustomerId, (customers: Customer[], selectedId: number) => {
-  return customers.filter((customer: Customer) => customer.id === selectedId)[0];
+    return customers.filter((customer: Customer) => customer.id === selectedId)[0];
 });
 
 

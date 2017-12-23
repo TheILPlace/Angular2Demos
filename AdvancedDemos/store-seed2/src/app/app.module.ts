@@ -18,6 +18,7 @@ import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './nav/about.component';
 import { PreloadSelectedModulesList } from './preload_selected_modules_list';
 
+import './rxjs-imports';
 
 @NgModule({
   declarations: [

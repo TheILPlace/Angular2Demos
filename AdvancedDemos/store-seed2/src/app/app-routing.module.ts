@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: 'customers', loadChildren: './modules/customers/customers.module#CustomersModule'
     ,
-    data: { preload: true } // pre load this module
+    data: { preload: false } // pre load this module
   },
   { path: 'admin', loadChildren: './modules/admin/admin.module#AdminModule' },
   { path: 'about', component: AboutComponent },
